@@ -121,7 +121,6 @@ GameObject:
   m_Component:
   - component: {fileID: 66847061}
   - component: {fileID: 66847064}
-  - component: {fileID: 66847063}
   m_Layer: 0
   m_Name: "Gubb\xE4"
   m_TagString: Untagged
@@ -142,31 +141,6 @@ Transform:
   m_Father: {fileID: 1259924020}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &66847063
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 66847060}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 1.28}
-    newSize: {x: 0.64, y: 1.28}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.64, y: 1.28}
-  m_EdgeRadius: 0
 --- !u!212 &66847064
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -222,7 +196,7 @@ GameObject:
   - component: {fileID: 1024837832}
   - component: {fileID: 1024837831}
   - component: {fileID: 1024837830}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -917,6 +891,7 @@ GameObject:
   - component: {fileID: 1131539942}
   - component: {fileID: 1131539941}
   - component: {fileID: 1131539940}
+  - component: {fileID: 1131539944}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -986,6 +961,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1131539944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1131539939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4140e5a5d964554884a0a90d063e9c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1259924018}
 --- !u!1 &1259924018
 GameObject:
   m_ObjectHideFlags: 0
@@ -996,9 +983,10 @@ GameObject:
   - component: {fileID: 1259924020}
   - component: {fileID: 1259924019}
   - component: {fileID: 1259924021}
+  - component: {fileID: 1259924022}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1014,7 +1002,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa86d386039ed794b8dc7614f3f4adac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 3
+  jumpForce: 8
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 2147483648
 --- !u!4 &1259924020
 Transform:
   m_ObjectHideFlags: 0
@@ -1049,6 +1041,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!70 &1259924022
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1259924018}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 0.5, y: 1}
+  m_Direction: 0
 --- !u!1 &1525757047
 GameObject:
   m_ObjectHideFlags: 0
