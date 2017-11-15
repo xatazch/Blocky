@@ -16,8 +16,8 @@ public class MainCameraController : MonoBehaviour {
 	void Update () {
         transform.position = player.transform.position + offset;
 
-        Debug.Log("Player: " + player.transform.position);
-        Debug.Log("offset: " + offset);
-        Debug.Log("transform.position: " + transform.position);
+        //Debug.Log("Player: " + player.transform.position);
+        //Debug.Log("offset: " + offset);
+        //Debug.Log("transform.position: " + transform.position);
     }
 }
