@@ -1,12 +1,13 @@
 fileFormatVersion: 2
 guid: 423ef560834ead649a8c1282efdb92d3
-timeCreated: 1510775677
+timeCreated: 1510781231
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
     21300000: Ground tiles_0
     21300002: Ground tiles_1
     21300004: Ground tiles_2
+    21300006: Ground tiles_3
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -34,7 +35,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: -1
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -49,7 +50,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 256
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -84,10 +85,10 @@ TextureImporter:
       name: Ground tiles_0
       rect:
         serializedVersion: 2
-        x: 64
-        y: 64
-        width: 64
-        height: 64
+        x: 0
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -98,13 +99,13 @@ TextureImporter:
       name: Ground tiles_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 64
+        x: 256
+        y: 256
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 8}
+      border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
@@ -112,10 +113,24 @@ TextureImporter:
       name: Ground tiles_2
       rect:
         serializedVersion: 2
-        x: 64
+        x: 0
         y: 0
-        width: 64
-        height: 64
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 24}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Ground tiles_3
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 256
+        height: 256
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

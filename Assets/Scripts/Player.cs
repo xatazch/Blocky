@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
 
     private bool IsGrounded()
     {
-        var hit = Physics2D.Raycast(playerRigidbody2D.position, Vector2.down, 0.8f, groundLayer);
+        var hit = Physics2D.Raycast(playerRigidbody2D.position, Vector2.down, 0.9f, groundLayer);
         if (hit.collider != null)
             return true;
 
